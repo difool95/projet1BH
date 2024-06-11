@@ -68,7 +68,7 @@ async function Connect() {
     headers: { 'Authorization': `Basic ${DIDKEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       // source_url: "https://mouvmnt.com/d-id/bilel.jpg",
-      source_url: "https://mouvmnt.com/d-id/oussema.jpeg",
+      source_url: "https://mouvmnt.com/d-id/oussemacroped.jpeg",
     }),
   });
 
