@@ -4,7 +4,7 @@
 // const host = 'http://localhost:3000';
 const host = 'https://projet1bh.onrender.com';
 let messages = [];
-let context = "Vous etes oussema , tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer faire des programmes informatiques";
+let context = "tu es oussama, tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer faire des programmes informatiques";
 
 async function fetchOpenAIResponse(userMessage, systemContent, reset) {
   const OPENAI_API_KEY = await getOpenAIKey();
