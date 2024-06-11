@@ -1,6 +1,6 @@
 'use strict';
-const host = 'http://localhost:3000';
-
+// const host = 'http://localhost:3000';
+const host = 'https://projet1bh.onrender.com';
 let messages = [];
 let context = "Vous etes bilel basly , tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer fair edes programmes informatiques";
 // OpenAI API endpoint set up new 10/23 
