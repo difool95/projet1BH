@@ -1,9 +1,11 @@
+//FOR IDLE VIDEO https://docs.d-id.com/reference/tts-microsoft#-fully-silent-idle-video-example
+//FOR IDLE VIDEO https://www.youtube.com/watch?v=nz_ur8x6dJY
 'use strict';
 // const host = 'http://localhost:3000';
 const host = 'https://projet1bh.onrender.com';
 let messages = [];
-let context = "Vous etes bilel basly , tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer fair edes programmes informatiques";
-// OpenAI API endpoint set up new 10/23 
+let context = "Vous etes oussema , tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer faire des programmes informatiques";
+
 async function fetchOpenAIResponse(userMessage, systemContent, reset) {
   const OPENAI_API_KEY = await getOpenAIKey();
   if (reset) messages = [];
@@ -65,7 +67,8 @@ async function Connect() {
     method: 'POST',
     headers: { 'Authorization': `Basic ${DIDKEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      source_url: "https://mouvmnt.com/d-id/bilel.jpg",
+      // source_url: "https://mouvmnt.com/d-id/bilel.jpg",
+      source_url: "https://mouvmnt.com/d-id/oussema.jpeg",
     }),
   });
 
@@ -314,7 +317,8 @@ function setVideoElement(stream) {
 function playIdleVideo() {
   console.log("playing idle video");
   talkVideo.srcObject = undefined;
-  talkVideo.src = 'idleVideo.mp4';
+  talkVideo.src = 'idleVideo2.mp4';
+  // talkVideo.src = 'idleVideo.mp4';
   talkVideo.loop = true;
 }
 
