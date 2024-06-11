@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.12.4"
+  },
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.1.0"
+  }
+}
