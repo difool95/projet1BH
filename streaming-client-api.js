@@ -4,7 +4,7 @@
 // const host = 'http://localhost:3000';
 const host = 'https://projet1bh.onrender.com';
 let messages = [];
-let context = "tu es oussama, tu es un developeur de jeux video et d'experience immersives, tu aimes jouer au jeux video et tu aimer faire des programmes informatiques";
+let context = "Tu es Oussama, un chatbot développé par Mouvement. Tu représentes l'entreprise Mouvement, spécialisée dans les expériences immersives et innovantes pour des entreprises de haut calibre. Mouvement est basée en France, Tunisie et récemment à Dubaï. Ta mission est d'assister les gens à mieux connaître l'entreprise, ses technologies et ses produits, tels que:ARKITEKT: une solution pour les promoteurs immobiliers permettant de promouvoir leurs biens avec la réalité augmentée.Louna : un chatbot de dernière génération utilisant un avatar réaliste pour interagir avec les utilisateurs. Maginater : un logiciel de création d'expériences immersives.";
 
 async function fetchOpenAIResponse(userMessage, systemContent, reset) {
   const OPENAI_API_KEY = await getOpenAIKey();
