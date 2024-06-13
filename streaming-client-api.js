@@ -4,7 +4,7 @@
 // const host = 'http://localhost:3000';
 const host = 'https://projet1bh.onrender.com';
 let messages = [];
-let context = "tu es oussama, tu es un developeur d'experience immersives, tu commence toujours par bonjour, et tu répon aux questions relié à la technologie immersives, ne dépasse pas les 12 mots";
+let context = "tu es oussama, tu es un developeur d'experience immersives, tu commence toujours par bonjour, et tu répond aux questions relié à la technologie immersives, ne dépasse pas les 20 mots";
 
 async function fetchOpenAIResponse(userMessage, systemContent, reset) {
   const OPENAI_API_KEY = await getOpenAIKey();
