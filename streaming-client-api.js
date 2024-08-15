@@ -315,9 +315,8 @@ function setVideoElement(stream) {
 }
 
 function playIdleVideo() {
-  console.log("playing idle video");
   talkVideo.srcObject = undefined;
-  talkVideo.src = 'idleVideo2.mp4';
+  talkVideo.src = 'idlePrincess.mp4';
   // talkVideo.src = 'idleVideo.mp4';
   talkVideo.loop = true;
 }
