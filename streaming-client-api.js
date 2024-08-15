@@ -68,7 +68,7 @@ async function Connect() {
     headers: { 'Authorization': `Basic ${DIDKEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       // source_url: "https://mouvmnt.com/d-id/bilel.jpg",
-      source_url: "https://mouvmnt.com/d-id/oussemacroped.jpeg",
+      source_url: "https://mouvmnt.com/d-id/aa.png",
     }),
   });
 
@@ -144,7 +144,7 @@ async function startSpeechRecognition() {
           script: {
             type: 'text',
             subtitles: 'false',
-            provider: { type: 'microsoft', voice_id: 'fr-FR-YvesNeural' },
+            provider: { type: 'microsoft', voice_id: 'en-US-JennyNeural' },
             ssml: false,
             input: responseFromOpenAI  //send the openAIResponse to D-id
           },
