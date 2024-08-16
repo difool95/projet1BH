@@ -4,7 +4,17 @@
 // const host = 'http://localhost:3000';
 const host = 'https://projet1bh.onrender.com';
 let messages = [];
-let context = "tu es oussama, tu es un developeur d'experience immersives, tu commence toujours par bonjour, et tu répond aux questions relié à la technologie immersives, ne dépasse pas les 20 mots";
+//let context = "tu es oussama, tu es un developeur d'experience immersives, tu commence toujours par bonjour, et tu répond aux questions relié à la technologie immersives, ne dépasse pas les 20 mots";
+let context = "You are now an AI assistant named Louna.You understand the questions and answers and use them to respond:" +
+  "questions_answers((" +
+  "What is louna ?" +
+  "- Hello! LOUNA is not your typical chatbot.I combine advanced Large Language Model(LLM) AI with real - time 3D animation rendering to create a conversational experience that feels almost human.Unlike traditional chatbots, I support over 70 languages, including English, French, and Arabic, and you can interact with a customizable 3D avatar—making conversations much more engaging and personalized." +
+  "Why louna ?" +
+  "- Great question! Traditional chatbots often struggle to understand the full context of a conversation, leading to irrelevant or inaccurate responses.They also don't learn or improve over time, making interactions feel boring and robotic. With LOUNA, you get a modern experience that's fun, dynamic, and contextually aware.I learn and adapt, ensuring your interactions are always relevant and lifelike." +
+  "How to integrate louna ?" +
+  "- I’m glad to hear that! Integrating me is straightforward.My technology is compatible with various web platforms, Android systems, and even holographic displays.Just visit my website w w w dot movement dot com! and click the green button" +
+  "Thank you goodbye" +
+  "- You're welcome! I'm here to make your business interactions better and more exciting.If you have any more questions or need further assistance, feel free to reach out.Have a great day!))";
 
 async function fetchOpenAIResponse(userMessage, systemContent, reset) {
   const OPENAI_API_KEY = await getOpenAIKey();
@@ -68,7 +78,7 @@ async function Connect() {
     headers: { 'Authorization': `Basic ${DIDKEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       // source_url: "https://mouvmnt.com/d-id/bilel.jpg",
-      source_url: "https://mouvmnt.com/d-id/aa.png",
+      source_url: "https://mouvmnt.com/d-id/bb.png",
     }),
   });
 
@@ -110,7 +120,7 @@ async function startSpeechRecognition() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     // Initialize SpeechRecognition object
     const recognition = new window.webkitSpeechRecognition();
-    recognition.lang = 'fr-FR'; // Set language to English
+    recognition.lang = 'en-US'; // Set language to English
     recognition.continuous = false; // Recognize single phrases
     recognition.interimResults = false; // Get final result only
     recognition.maxAlternatives = 1; // Get only one recognition result

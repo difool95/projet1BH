@@ -116,7 +116,11 @@
     #buttons {
       clear: both;
       padding: 0 0 0 0;
-      text-align: center;
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      /* Adjust as needed */
+      transform: translateX(-50%);
     }
 
     button {
@@ -156,7 +160,7 @@
     }
 
     #video-wrapper div {
-      width: 400px;
+      width: 800px;
       margin: 0 auto;
       padding: 50px 0 0 0;
     }
@@ -176,7 +180,7 @@
     <!-- added "id=video-wrapper" -->
     <div id="video-wrapper">
       <div>
-        <video id="talk-video" width="400" height="400" autoplay></video>
+        <video id="talk-video" width="800" height="800" autoplay></video>
       </div>
     </div>
     <br />
