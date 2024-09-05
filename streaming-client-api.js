@@ -64,6 +64,21 @@ const talkVideo = document.getElementById('talk-video');
 talkVideo.setAttribute('playsinline', '');
 
 Connect();
+// Define a function to be called when the keyboard button is pressed
+const handleKeyPress = (event) => {
+  if (event.key === 's' || event.key === 'S') { // Check for both lowercase and uppercase "S"
+    if (peerConnection?.signalingState === 'stable' || peerConnection?.iceConnectionState === 'connected') {
+      startSpeechRecognition();
+
+      // New from Jim 10/23 -- Get the user input from the text input field get ChatGPT Response
+      // const userInput = document.getElementById('user-input-field').value;
+
+    }
+  }
+};
+
+window.addEventListener('keydown', handleKeyPress);
+
 async function Connect() {
   if (peerConnection && peerConnection.connectionState === 'connected') {
     return;
@@ -103,16 +118,16 @@ async function Connect() {
 }
 
 // This is changed to accept the ChatGPT response as Text input to D-ID #138 responseFromOpenAI 
-const talkButton = document.getElementById('talk-button');
-talkButton.onclick = async () => {
-  if (peerConnection?.signalingState === 'stable' || peerConnection?.iceConnectionState === 'connected') {
-    startSpeechRecognition();
+// const talkButton = document.getElementById('talk-button');
+// talkButton.onclick = async () => {
+// if (peerConnection?.signalingState === 'stable' || peerConnection?.iceConnectionState === 'connected') {
+//   startSpeechRecognition();
 
-    // New from Jim 10/23 -- Get the user input from the text input field get ChatGPT Response
-    // const userInput = document.getElementById('user-input-field').value;
+//   // New from Jim 10/23 -- Get the user input from the text input field get ChatGPT Response
+//   // const userInput = document.getElementById('user-input-field').value;
 
-  }
-};
+// }
+// };
 
 async function startSpeechRecognition() {
   try {
